@@ -1,10 +1,10 @@
 # 客户端配置
 
-**/opt/frp/docker-compose.yaml**文件
+1. **/opt/frp/docker-compose.yaml**文件
 ```yaml
 version: '3.1'
 services:
-  frp-server:
+  frp-client:
     image: rimag/frp:client-0.22.0
     network_mode: host
     restart: always
@@ -13,7 +13,7 @@ services:
       - /opt/frp/conf:/conf
 ```
 
-**/opt/frp/conf/frps.ini**文件
+2. **/opt/frp/conf/frps.ini**文件
 ```ini
 [common]
 # server setting
@@ -32,7 +32,7 @@ remote_port = 6001
 
 # 服务器端配置
 
-**/opt/frp/docker-compose.yaml**文件
+1. **/opt/frp/docker-compose.yaml**文件
 ```yaml
 version: '3.1'
 services:
@@ -45,7 +45,7 @@ services:
       - /opt/frp/conf:/conf
 ```
 
-**/opt/frp/conf/frps.ini**文件
+2. **/opt/frp/conf/frps.ini**文件
 ```ini
 # host setting
 bind_addr = 0.0.0.0
